@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACT Table Insights</title>
+</head>
+<body>
+    <h1>FACT Table Insights</h1>
+    
+    <h2>Total Claim Amount by Category</h2>
+    <div>{{ plot1 | safe }}</div>
+    
+    <h2>Average Preauth Amount by Surgery</h2>
+    <div>{{ plot2 | safe }}</div>
+    
+    <h2>Claim Amount Distribution by Gender</h2>
+    <div>{{ plot3 | safe }}</div>
+
+    <h2>Average Claim Amount Distribution by Age</h2>
+    <div>{{ plot4 | safe }}</div>
+</body>
+</html>

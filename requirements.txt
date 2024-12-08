@@ -1,0 +1,6 @@
+flask
+sqlalchemy 
+pyodbc 
+pandas 
+matplotlib 
+plotly
