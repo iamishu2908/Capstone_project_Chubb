@@ -67,7 +67,7 @@ def index():
     df4 = pd.read_sql_query(query4, conn)
     
     # Visualization 4: Line Chart
-    fig4 =  px.line(df4, x='AGE', y='Average_Claim_Amount', title="Average Claim Amount Distribution by AGE")
+    fig4 =  px.line(df4, x='AGE', y='Average_Claim_Amount', title="Average Claim mount Distribution by AGE")
     plot4 = fig4.to_html(full_html=False)
     
     conn.close()
