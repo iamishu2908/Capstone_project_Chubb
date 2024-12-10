@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Andhra Pradesh Health Data Insights</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align:center;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            color: black;
+        }
+        h2 {
+            margin-top: 30px;
+            color: black;
+        }
+        .header {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .header button {
+            padding: 10px 15px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .header button:hover {
+            background-color: #333;
+        }
+        img {
+            max-width: 100%;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-link:hover {
+            background-color: #333;
+        }
+        .table-container {
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #f9f9f9;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="header">
+            <a href="{{ url_for('home') }}">
+                <button>Home</button>
+            </a>
+        </div>
+        <h1>Query Results</h1>
+        <div class="table-container">
+            {{ table|safe }}
+        </div>
+        <h2>Generated Plot</h2>
+        <img src="data:image/png;base64,{{ plot_url }}" alt="Generated Plot">
+        <a href="/" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>

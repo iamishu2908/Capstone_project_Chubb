@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Insights</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50;
+            padding: 50;
+            width:80%
+        }
+        
+        h1 {
+            color: black;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin: 30px 0 15px;
+            color: black;
+        }
+        .header {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .header button {
+            padding: 10px 15px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .header button:hover {
+            background-color: #333;
+        }
+        .plot-container {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+        }
+        .plot-container img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="{{ url_for('home') }}">
+                <button>Home</button>
+            </a>
+        </div>
+        <h1>Data Insights</h1>
+        
+        <h2>Total Claim Amount by Category</h2>
+        <div class="plot-container">
+            {{ plot1 | safe }}
+        </div>
+        
+        <h2>Average Preauth Amount by Surgery</h2>
+        <div class="plot-container">
+            {{ plot2 | safe }}
+        </div>
+        
+        <h2>Claim Amount Distribution by Gender</h2>
+        <div class="plot-container">
+            {{ plot3 | safe }}
+        </div>
+
+        <h2>Average Claim Amount Distribution by Age</h2>
+        <div class="plot-container">
+            {{ plot4 | safe }}
+        </div>
+    </div>
+</body>
+</html>
